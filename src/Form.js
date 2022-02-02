@@ -1,8 +1,9 @@
 import React from 'react';
 import NameInput from './NameInput';
 import Dropdown from './Dropdown';
+import InstructionsForm from './InstructionsForm';
 
-export default function Form({ setOrderName, setMainId, setSideId, setDrinkId, setInstructions }) {
+export default function Form({ setOrderName, setMainId, setSideId, setDrinkId, setInstructions, instructions }) {
   return <div className='form'>
     {/* Name Input Component */}
     <NameInput 
@@ -29,11 +30,10 @@ export default function Form({ setOrderName, setMainId, setSideId, setDrinkId, s
     </div>
 
     {/* Instruction Form */}
-    <form className='instructions-form'>
-      <h4>Any Special Instructions: </h4>
-      <input></input>
-      <button>Submit</button>
-    </form>
+    <InstructionsForm
+      instructions={instructions}
+      setInstructions={setInstructions}
+    />
 
   </div>;
 }

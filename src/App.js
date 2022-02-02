@@ -29,6 +29,7 @@ function App() {
         setSideId={setSideId}
         setDrinkId={setDrinkId}
         setInstructions={setInstructions}
+        instructions={instructions}
       />
 
     </div>
