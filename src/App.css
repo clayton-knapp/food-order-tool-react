@@ -74,3 +74,20 @@ html, body, #root, .App {
 .instructions-form input{
   width: 300px
 }
+
+.past-order-display {
+  border: 1px solid black;
+  width: 250px;
+  margin: 25px auto;
+}
+
+.past-order-display img {
+  width: 50px;
+  margin: 10px;
+}
+
+.past-orders-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
