@@ -1,27 +1,39 @@
 import React from 'react';
+import NameInput from './NameInput';
+import Dropdown from './Dropdown';
 
-export default function Form() {
+export default function Form({ setOrderName, setMainId, setSideId, setDrinkId, setInstructions }) {
   return <div className='form'>
     {/* Name Input Component */}
-    <div>
-      <label>Name for Order: 
-        <input></input>
-      </label>
-    </div>
+    <NameInput 
+      setOrderName={setOrderName}
+    />
 
     {/* 3 Dropdowns */}
     <div className='dropdowns-container'>
-      <div className='dropdown'>
-        <h4>Select Main:</h4>
-        <select>
-          <option value='1'>Mezza</option>
-          <option value='2'>Skewers</option>
-          <option value='3'>Shwarma</option>
-        </select>
-      </div>
+      <Dropdown className='dropdown'
+        setId={setMainId}
+        type={'Main'}
+        options={['Mezza', 'Skewers', 'Shwarma']}
+      />
+      <Dropdown className='dropdown'
+        setId={setSideId}
+        type={'Side'}
+        options={['Hummus', 'Baba Ganoush', 'Mujadra']}
+      />
+      <Dropdown className='dropdown'
+        setId={setDrinkId}
+        type={'Drink'}
+        options={['Mango Lassie', 'Turkish Coffee', 'Bucket-O-Dew']}
+      />
     </div>
 
     {/* Instruction Form */}
+    <form className='instructions-form'>
+      <h4>Any Special Instructions: </h4>
+      <input></input>
+      <button>Submit</button>
+    </form>
 
   </div>;
 }

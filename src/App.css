@@ -57,4 +57,20 @@ html, body, #root, .App {
   border: 1px solid black;
   margin: 20px;
   width: 700px;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.dropdowns-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.instructions-form button{
+  margin-left: 10px;
+}
+
+.instructions-form input{
+  width: 300px
 }
