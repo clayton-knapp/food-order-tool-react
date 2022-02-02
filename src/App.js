@@ -9,7 +9,7 @@ function App() {
   const [mainId, setMainId] = useState(1);
   const [sideId, setSideId] = useState(1);
   const [drinkId, setDrinkId] = useState(1);
-  const [instructions, setInstructions] = useState(['test', 'test2']);
+  const [instructions, setInstructions] = useState(['']);
 
 
 
@@ -31,7 +31,6 @@ function App() {
         setInstructions={setInstructions}
         instructions={instructions}
       />
-
     </div>
   );
 }
