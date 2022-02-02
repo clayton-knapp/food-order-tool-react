@@ -1,23 +1,60 @@
-import logo from './logo.svg';
 import './App.css';
+import Display from './Display';
+import Form from './Form';
+import { useState } from 'react';
+import PastOrders from './PastOrders';
+import { useAppState } from './useAppState';
 
 function App() {
+  // useState
+  const {
+    orderName,
+    setOrderName,
+    mainId,
+    setMainId,
+    sideId,
+    setSideId,
+    drinkId,
+    setDrinkId,
+    instructions,
+    setInstructions,
+    pastOrders,
+    setPastOrders
+  } = useAppState();
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Lebanese Restaurant!</h2>
+      <Display 
+        orderName={orderName}
+        mainId={mainId}
+        sideId={sideId}
+        drinkId={drinkId}
+        instructions={instructions}
+      />
+      <Form 
+        setOrderName={setOrderName}
+        setMainId={setMainId}
+        setSideId={setSideId}
+        setDrinkId={setDrinkId}
+        setInstructions={setInstructions}
+        instructions={instructions}
+        orderName={orderName}
+      />
+      <PastOrders
+        orderName={orderName}
+        mainId={mainId}
+        sideId={sideId}
+        drinkId={drinkId}
+        instructions={instructions}
+        pastOrders={pastOrders}
+        setPastOrders={setPastOrders}
+        setInstructions={setInstructions}
+        setOrderName={setOrderName}
+      />
+
     </div>
   );
 }
