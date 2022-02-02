@@ -3,11 +3,12 @@ import NameInput from './NameInput';
 import Dropdown from './Dropdown';
 import InstructionsForm from './InstructionsForm';
 
-export default function Form({ setOrderName, setMainId, setSideId, setDrinkId, setInstructions, instructions }) {
+export default function Form({ setOrderName, setMainId, setSideId, setDrinkId, setInstructions, instructions, orderName }) {
   return <div className='form'>
     {/* Name Input Component */}
     <NameInput 
       setOrderName={setOrderName}
+      orderName={orderName}
     />
 
     {/* 3 Dropdowns */}

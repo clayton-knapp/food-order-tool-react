@@ -34,6 +34,7 @@ function App() {
         setDrinkId={setDrinkId}
         setInstructions={setInstructions}
         instructions={instructions}
+        orderName={orderName}
       />
       <PastOrders
         orderName={orderName}
@@ -43,6 +44,8 @@ function App() {
         instructions={instructions}
         pastOrders={pastOrders}
         setPastOrders={setPastOrders}
+        setInstructions={setInstructions}
+        setOrderName={setOrderName}
       />
 
     </div>
