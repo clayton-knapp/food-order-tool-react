@@ -1,3 +1,7 @@
+html, body, #root, .App {
+  height: 100%;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.food-display {
+  border: 1px solid black;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.food-display img {
+  width: 200px;
+  margin: 10px;
+}
+
+.form {
+  border: 1px solid black;
+  margin: 20px;
+  width: 700px;
 }
