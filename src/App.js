@@ -3,17 +3,24 @@ import Display from './Display';
 import Form from './Form';
 import { useState } from 'react';
 import PastOrders from './PastOrders';
+import { useAppState } from './useAppState';
 
 function App() {
   // useState
-  const [orderName, setOrderName] = useState('');
-  const [mainId, setMainId] = useState(1);
-  const [sideId, setSideId] = useState(1);
-  const [drinkId, setDrinkId] = useState(1);
-  const [instructions, setInstructions] = useState([]);
-
-  //Stretch: past orders
-  const [pastOrders, setPastOrders] = useState([]);
+  const {
+    orderName,
+    setOrderName,
+    mainId,
+    setMainId,
+    sideId,
+    setSideId,
+    drinkId,
+    setDrinkId,
+    instructions,
+    setInstructions,
+    pastOrders,
+    setPastOrders
+  } = useAppState();
 
 
 
